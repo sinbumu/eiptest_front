@@ -1,17 +1,16 @@
 // src/App.js
 
 import React, { useState } from 'react';
+import axios from 'axios';
 import Step1UploadClaim from './components/Step1UploadClaim';
 import Step2CertificateRequest from './components/Step2CertificateRequest';
 import Step3IssuerCreation from './components/Step3IssuerCreation';
 import Step5VerificationRequest from './components/Step5VerificationRequest';
 import Step6VerificationResult from './components/Step6VerificationResult';
-// src/index.js 또는 src/App.js
-import axios from 'axios';
+import ModifyClaim from './components/ModifyClaim'; // 추가된 부분
 
 // Axios 기본 URL 설정
 axios.defaults.baseURL = 'http://localhost:3000';
-
 
 function App() {
   const [certificateRequestData, setCertificateRequestData] = useState(null);
@@ -41,6 +40,8 @@ function App() {
           <hr />
         </>
       )}
+      {/* 클레임 변조 컴포넌트 추가 */}
+      <ModifyClaim />
     </div>
   );
 }
