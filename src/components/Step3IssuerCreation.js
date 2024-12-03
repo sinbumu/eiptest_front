@@ -63,7 +63,7 @@ function Step3IssuerCreation({ certificateRequestData }) {
 
   return (
     <div>
-      <h2>발급자 작성</h2>
+      <h2>증명서 발행</h2>
       <p>Issuer Address: {issuerAddress}</p>
       <input
         type='text'
